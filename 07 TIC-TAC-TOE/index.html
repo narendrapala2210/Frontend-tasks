@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- score card -->
+    <div class="score-card">
+      <p class="ur-score">Your Score : <span id="ur-score">0</span></p>
+      <p class="pc-score">PC Score : <span id="pc-score">0</span></p>
+    </div>
+    <!-- title -->
+    <h1 class="title">tic tac toe</h1>
+    <button id="result-button" class="d-none result">Player Won</button>
+    <!-- Play Board -->
+    <div id="play-board" class="grid-playboard"></div>
+
+    <div class="buttons">
+      <p id="msg" class="msg">lets Play</p>
+
+      <button id="play-button" class="play btn">Play</button>
+      <button id="reset-button" class="reset btn d-none">Reset</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

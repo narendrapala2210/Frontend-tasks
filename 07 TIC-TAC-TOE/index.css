@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  text-transform: capitalize;
+}
+body {
+  background-color: rgb(11, 10, 32);
+  padding: 20px;
+}
+.score-card {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  text-align: right;
+}
+.ur-score {
+  color: aquamarine;
+}
+.pc-score {
+  color: rgb(249, 40, 7);
+}
+
+/* score-card end */
+.title {
+  text-align: center;
+  margin: 50px;
+}
+/* play board */
+
+.grid-playboard {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin: 50px 0;
+}
+.grid-item {
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  color: rgb(252, 248, 248);
+  font-size: 40px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.placed-x {
+  box-shadow: 1px 1px 5px rgb(72, 252, 132);
+  background-color: rgb(248, 246, 246);
+  transition: 0.3s ease;
+  color: rgb(10, 232, 14);
+  transform: scale(0.9);
+}
+.placed-0 {
+  box-shadow: 1px 1px 10px rgb(253, 11, 3);
+  background-color: rgb(248, 246, 246);
+  transition: 0.5s ease;
+  color: rgb(249, 40, 7);
+  transform: scale(0.9);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.btn {
+  width: 90px;
+  height: 27px;
+  color: white;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  background-color: transparent;
+}
+
+.d-none {
+  display: none;
+}
+.msg {
+  margin: 10px;
+}
+.result {
+  width: 180px;
+  height: 50px;
+  color: rgb(12, 245, 36);
+  background-color: rgb(11, 10, 32);
+  border: 1px solid rgb(12, 245, 36);
+  position: fixed;
+  left: calc(50vw - 90px);
+  top: 40vh;
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.mark {
+  background-color: rgba(0, 0, 0, 0.993);
+  box-shadow: 0 0 10px rgb(249, 249, 249);
+  border: 1px solid rgb(17, 0, 255);
+}
+@media screen and (min-width: 700px) {
+  .grid-item:hover {
+    box-shadow: 1px 1px 10px white;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .placed-x:hover {
+    cursor: no-drop;
+  }
+  .placed-0:hover {
+    cursor: no-drop;
+  }
+  .btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  .result:hover {
+    background-color: rgb(12, 245, 36);
+    color: black;
+  }
+}
